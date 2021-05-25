@@ -310,7 +310,7 @@ void Analysis::Begin(TTree * /*tree*/) {
     ////////Output file//////////
 
     if(BeData){
-        f_cut_name = "BeCutIC2.root";
+        f_cut_name = "../BeCutIC2.root";
         f_cut = TFile::Open(f_cut_name); 
         pidcut = (TCutG*) f_cut->Get("BeCut_NewCalSd1rSd2r");//PID cut for Be
         if(Target){
@@ -329,7 +329,7 @@ void Analysis::Begin(TTree * /*tree*/) {
             }
         }
     }else{
-        f_cut_name = "CCalCut.root";
+        f_cut_name = "../CCalCut.root";
         f_cut = TFile::Open(f_cut_name); 
         pidcut = (TCutG*) f_cut->Get("CcutCalSd1rSd2rFull");//PID cut for C
         if(Target){
@@ -350,25 +350,25 @@ void Analysis::Begin(TTree * /*tree*/) {
     f_out = new TFile(f_out_name, "RECREATE");
     // g_out = new TFile("C_YuSiEnergy.root", "RECREATE");
 
-    f_cutProton = TFile::Open("ProtonCut.root"); //PID cut for tritons (Yd)
+    f_cutProton = TFile::Open("../ProtonCut.root"); //PID cut for tritons (Yd)
 	pidcutProton = (TCutG*) f_cutProton->Get("protonCut");
 
-    f_cutTriton = TFile::Open("TritonCut.root"); //PID cut for tritons (Yd)
+    f_cutTriton = TFile::Open("../TritonCut.root"); //PID cut for tritons (Yd)
 	pidcutTriton = (TCutG*) f_cutTriton->Get("tritonCut");
 
-    f_cutDeuteron = TFile::Open("DeuteronCut.root"); //PID cut for Deuterons (Yd)
+    f_cutDeuteron = TFile::Open("../DeuteronCut.root"); //PID cut for Deuterons (Yd)
 	pidcutDeuteron = (TCutG*) f_cutDeuteron->Get("deuteronCut");
 
-    f_cutElastic = TFile::Open("ElasticCut.root"); //PID cut for Elastics (Sd1r vs Sd2r)
+    f_cutElastic = TFile::Open("../ElasticCut.root"); //PID cut for Elastics (Sd1r vs Sd2r)
 	pidcutElastic = (TCutG*) f_cutElastic->Get("CSd1rCSd2rElastic");
 
-    f_cutHorizontal1 = TFile::Open("HorizontalCut1.root"); //PID cut for Elastics (Sd1r vs Sd2r)
+    f_cutHorizontal1 = TFile::Open("../HorizontalCut1.root"); //PID cut for Elastics (Sd1r vs Sd2r)
 	pidcutHorizontal1 = (TCutG*) f_cutHorizontal1->Get("horizontalCut1");
 
-    f_cutHorizontal2 = TFile::Open("HorizontalCut2.root"); //PID cut for Elastics (Sd1r vs Sd2r)
+    f_cutHorizontal2 = TFile::Open("../HorizontalCut2.root"); //PID cut for Elastics (Sd1r vs Sd2r)
 	pidcutHorizontal2 = (TCutG*) f_cutHorizontal2->Get("horizontalCut2");
 
-    f_cutHorizontal3 = TFile::Open("HorizontalCut3.root"); //PID cut for Elastics (Sd1r vs Sd2r)
+    f_cutHorizontal3 = TFile::Open("../HorizontalCut3.root"); //PID cut for Elastics (Sd1r vs Sd2r)
 	pidcutHorizontal3 = (TCutG*) f_cutHorizontal3->Get("horizontalCut3");
 
     //definition of histograms
