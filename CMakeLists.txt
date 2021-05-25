@@ -38,6 +38,7 @@ set(SCRIPTS
     geometry_s1506.txt
     Sd1rAlphaCalibration.txt
     Sd2rInBeamCalibration.txt
+    calibration_CsI1_500x_jerome.txt
     )
 
 foreach(_script ${SCRIPTS})
