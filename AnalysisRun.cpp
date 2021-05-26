@@ -15,7 +15,7 @@ int main() {
 TChain* MakeChain() {
     auto *chain = new TChain("AutoTree");
 
-    bool BeData = 1;
+    bool BeData = 0;
     bool Target = 1;
     bool Server = 1;
 

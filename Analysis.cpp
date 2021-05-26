@@ -37,7 +37,7 @@ void Analysis::Begin(TTree * /*tree*/) {
     /////////////////////Data//////////////////////
 
     Target = 1;
-    BeData = 1;
+    BeData = 0;
 
     //////////////Target thickness////////////////
     TT10 = 0;
