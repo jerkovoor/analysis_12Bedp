@@ -831,7 +831,7 @@ Bool_t Analysis::Process(Long64_t entry) {
         if(*CsI1Mul==*YdMul){
             // int csi1_chanNo = (16*CsI1Channel[i])+YdChannel[i];
             // double energy = CsI1EnergyRaw[i]*Csi1RingSectorCalibration[csi1_chanNo].first + Csi1RingSectorCalibration[csi1_chanNo].second;
-            double energy = CsI1EnergyRaw[i]*Csi1RingSectorCalibration[CsI1Channel[i]][YdRing[i]].first;// + Csi1RingSectorCalibration[CsI1Channel[i]][YdRing[i]].second;
+            double energy = (CsI1EnergyRaw[i]-Csi1RingSectorCalibration[CsI1Channel[i]][YdRing[i]].second)*Csi1RingSectorCalibration[CsI1Channel[i]][YdRing[i]].first;
             // std::cout << CsI1Channel[i] << "\t" << YdRing[i] << "\t" << CsI1EnergyRaw[i] << "\t" << Csi1RingSectorCalibration[CsI1Channel[i]][YdRing[i]].first << "\t" << Csi1RingSectorCalibration[CsI1Channel[i]][YdRing[i]].second << "\t" << energy << std::endl;
             CsIDet hit = {*CsI1Mul, CsI1Channel[i], CsI1EnergyRaw[i], energy};
             CsI1Detector.push_back(hit);
