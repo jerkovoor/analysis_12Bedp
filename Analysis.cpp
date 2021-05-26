@@ -505,9 +505,9 @@ void Analysis::Begin(TTree * /*tree*/) {
     hSdReconSd1An = new TH2D("hSdReconSd1An","Reconstructed Sd Energy vs Angle from Sd1rEn",24,Sd1Bins,1200,0,120);
     hSdReconSd1 = new TH1D("hSdReconSd1","Reconstructed Sd Energy from Sd1rEn",1200,0,120);
 
-    hYdCsI1 = new TH2D("hYdCsI1","Yd vs CsI2",1000,10,60,250,0,10); // Yd vs CsI to see the elastic scattering
+    hYdCsI1 = new TH2D("hYdCsI1","Yd vs CsI2",1000,0,50,250,0,10); // Yd vs CsI to see the elastic scattering
     hYdCsI2 = new TH2D("hYdCsI2","Yd vs CsI2",1000,0,50,250,0,10);
-    hYdCsI1Elastic = new TH2D("hYdCsI1Elastic","Yd vs CsI1 with Elastic Gate",1000,10,60,250,0,10);
+    hYdCsI1Elastic = new TH2D("hYdCsI1Elastic","Yd vs CsI1 with Elastic Gate",1000,0,50,250,0,10);
     hYdAn = new TH2D("hYdAn","YdE vs Angle",16,Ydbins,250,0,10);
     hYdAnPIDProton = new TH2D("hYdAnPIDProton","YdE vs Angle with the Proton PID cut",16,Ydbins,250,0,10);
     hYdAnPIDDeuteron = new TH2D("hYdAnPIDDeuteron","YdE vs Angle with the Deuteron PID cut",16,Ydbins,250,0,10);
@@ -517,7 +517,7 @@ void Analysis::Begin(TTree * /*tree*/) {
         hYdElastic[i] = new TH1D(Form("hYdElasticR%d",i),Form("Yd Energy, ring %d",i),250,0,10);
     }
 
-    hYdCsI1_Tot = new TH2D("hYdCsI1_Tot","Yd vs Yd + CsI1",1000,10,60,250,0,10);
+    hYdCsI1_Tot = new TH2D("hYdCsI1_Tot","Yd vs Yd + CsI1",1000,0,50,250,0,10);
     hCsIAnPIDDeuteron = new TH2D("hCsIAnPIDDeuteron","CsI1 vs Angle with the Deuteron PID cut",16,Ydbins,1200,0,60);
     hYdCsI1Tot_AnPIDDeuteron = new TH2D("hYdCsI1Tot_AnPIDDeuteron","YdE +CsI1 vs Angle with the Deuteron PID cut",16,Ydbins,1200,0,60);
 
