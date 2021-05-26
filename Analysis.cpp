@@ -356,8 +356,8 @@ void Analysis::Begin(TTree * /*tree*/) {
     f_cutTriton = TFile::Open("../TritonCut.root"); //PID cut for tritons (Yd)
 	pidcutTriton = (TCutG*) f_cutTriton->Get("tritonCut");
 
-    f_cutDeuteron = TFile::Open("../DeuteronCut.root"); //PID cut for Deuterons (Yd)
-	pidcutDeuteron = (TCutG*) f_cutDeuteron->Get("deuteronCut");
+    f_cutDeuteron = TFile::Open("../DeuteronCut_C.root"); //PID cut for Deuterons (Yd)
+	pidcutDeuteron = (TCutG*) f_cutDeuteron->Get("deuteronCut_C");
 
     f_cutElastic = TFile::Open("../ElasticCut.root"); //PID cut for Elastics (Sd1r vs Sd2r)
 	pidcutElastic = (TCutG*) f_cutElastic->Get("CSd1rCSd2rElastic");
